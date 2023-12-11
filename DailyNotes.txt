@@ -1,0 +1,168 @@
+
+
+Spring Framework:
+================
+
+	spring is a non-invasive framework  which is used to create light weight and loosley coupled application
+
+	framework-->ready made templates
+
+
+non-invasive, light weight,loosley coupled
+invasive, heavy weight,tightly coupled
+
+
+		invasive 	:even though its a framework it will force to the developer to implement predefined API
+						Ex:Sturts
+		non-invasive:it will never force to the developer to implement predefined API
+					ex:spring,hibernate
+
+
+Servlets:
+web application -->URL
+
+	1)implements Servlet	5
+	2)extends GenericServlet	5
+	3)extends HttpServlet -->12 methods
+
+			HttpServlet
+		1*12=12 methods
+		100*12=1200 methods
+		
+	class Login extends HttpServlet
+	{
+	//12 methods
+	
+	
+	}heavy weight 
+EJB-->
+struts
+
+
+  ROD JOHNSON-->EJB -->EB,SB
+
+		interface21-->spring framework-->2003 1.x
+	
+
+											  6.x
+
+tightly coupled		-->loosley coupled
+
+
+	class Test
+	{
+	
+	public	Test()
+	{
+	
+	
+	}
+	
+	public void m1(){
+	
+	}
+	}
+
+
+	class Client
+	{
+		main()
+		{
+		Test test=new Test();
+		test.m1();
+		
+		}
+	}
+
+loosley coupled 
+
+spring framework
+
+	containers-->object life cycle 
+					1)creating an object
+					2)wiring the object
+					3)configuring the objects
+					4)destroying the objects
+
+		BeanFactory
+		APpliationContext
+								configuration file
+								
+										1)xml config			<beans><bean>......
+										2)annotation config   	@Component
+										3)java config
+		   b
+		
+		A         B    C   X
+
+
+
+//spring -->20+ 
+
+
+		spring core/IOC/Dependency injection module						
+		spring jdbc
+		spring mvc
+		spring ORM
+		spring web
+		spring aop
+		spring security
+		.......
+
+
+
+
+spring core :
+
+															configuration file
+								
+										1)xml config			<beans><bean>......
+										2)annotation config   	@Component
+										3)java config
+			setter injection								
+			constructor injection
+			autowiring 
+			
+			
+			org.springframework.*...
+			
+		BeanFactory
+		APpliationContext
+			
+						jars-
+			
+			
+						maven-->pom.xml -->dependencies 
+			
+			
+			
+		BeanFactory
+		AppliationContext		
+			
+			
+			xml--->schema xsd,dtd
+			
+						<beans>
+							<bean id="employee" class="com.ericsson.core.Employee"><!-- Employee employee=new Employee(); -->
+							
+							
+							</bean>
+							
+							
+							
+						
+						</beans>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+
+
+
+
