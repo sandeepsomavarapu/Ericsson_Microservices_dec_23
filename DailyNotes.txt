@@ -88,7 +88,7 @@ spring framework
 		APpliationContext
 								configuration file
 								
-										1)xml config			<beans><bean>......
+										1)xml config			<beans><bean><property><constructor-arg>,ref,autowire,scope.....
 										2)annotation config   	@Component
 										3)java config
 		   b
@@ -117,10 +117,18 @@ spring core :
 															configuration file
 								
 										1)xml config			<beans><bean>......
-										2)annotation config   	@Component
+										2)annotation config   	@Component,@componentscan,@Autowired,@Configuration
 										3)java config
-			setter injection								
-			constructor injection
+										
+										
+										
+											@Component/@Service/@Repository
+											@Scope
+										
+										
+										
+			setter injection				setter methods			<property>	
+			constructor injection			param constructor		<constructor-arg>
 			autowiring 
 			
 			
@@ -130,7 +138,7 @@ spring core :
 		APpliationContext
 			
 						jars-
-			
+				
 			
 						maven-->pom.xml -->dependencies 
 			
@@ -154,15 +162,242 @@ spring core :
 						</beans>
 						
 						
+		BeanFactory-->small scale application only and will not support all the annotations,lazy intializer
+		AppliationContext-->large scale applications and will support all the annotations,eager intializer
+		
+						
+				scope-->singleton
+						prototype
+						
+						autowiring
+						
+						autowire=		byname
+										bytype			setter injection
+									constructor			constructor injection
+						
+						
+						@Autowired
+						
+						
+						java config,xml
+						
+						
+	NOTE:spring has given annotations for user defined classes (@component/Service/@Repository/.....)but not for predefined classes
+		
+		explicit config
+						
+						@Bean--<bean>
+						
+						spring boot-->auto configuration
+						
+	@Component
+	@Autowired
+	@Configuration
+	@ComponentScan
+	@Service
+	@Repository
+	@Scope
+	@Qualifer
+	@Bean
+	@Value
+	
+						
+				database:
+
+						mysql-rdbms
+						
+						DDL,DML,DRL
+						
+						
+							java --->jdbc 
+
+										boilerplate code 
 						
 						
 						
 						
 						
+						JPA -->specification
+						
+						
+								ORM tools--->implementations
+						hibernate ,eclipse link,toplink,ibatis.....
+						
+						
+						JPA-->HIbernate 
+						
+						no need to the create table
+						
+						querys 
+						no exception 
+						cache 
 						
 						
 						
+						
+						employee 
+						eid ename esal eadd
+						
+						
+						ORM--->CRUD
+						
+						
+							jdbc-->value by value
+							
+							object relational mapping
+							
+							
+							
+							
+							
+							
+							database
+
+@Entity		
+@Table("emps")
+class Employee
+{
+@Id
+@Column("empid")
+private int eid;   //unique+nn=primary key
+private String empName
+private int	empSal;
+private String	empAdd;
+	...
 
 
 
 
+} 
+							
+							
+				Employee emp=new Employee(123,"suresh",89000,"hyderabad");		
+							
+							
+							
+client 
+
+
+
+
+
+jpa configuration file 		-->persistence.xml					
+							
+							db properties
+							
+							hibernate properties 
+							
+							
+							
+			insert  	persist
+			update 		merge			-1
+			delete 		remove
+			fetch		find
+			JPQL		createQuery
+						getTrnaction
+						begin
+						commit
+						
+					JPQL	-->querys -->independent on database
+						
+					mysql
+						
+						
+						
+				spring --->hibernate,struts		
+						
+
+
+
+		java->db ==>JPA  tightly coupled
+		
+		springJPA-->loosley coupled
+		
+		
+		maven	
+		
+				pom.xml
+					
+					<project>
+		
+					<dependencies>
+								<dependency>
+									<groupid>
+									<artifactid>mysql
+									<version>8.0.1
+								</dependency>
+					</dependencies>
+		
+		local repository  .m2
+		
+		central 
+		
+		remote 
+		
+		
+	springboot:
+	===========
+	
+		1)Auto configuration :most of the commonly used classes already configured by spring boot @Bean
+		2)Embeded server	 :tomcat,jetty,weblogic,websphere....
+		3)Starters			 :springboot starter parent
+		4)Actuators			 :endpoint url
+		
+					/health
+					/beans
+			
+
+		datasource-->DMDS,c3po,dbcp,dbcp2,hikari,tomcat,.....
+		
+			spring boot 1.x -->tomcat
+			spring boot 2.x -->hikari
+
+
+
+
+STS-->springboot starter project 
+
+		eclipse
+		
+		spring tools suite
+
+		spring intializer
+		
+
+Webservices:
+============
+			which is used to make communication/share information between two interoperable applications
+
+			SpringBootRestUsingJpaEmployeeCrud
+
+
+
+		product management
+		
+			1.add product
+			2.update product
+			3.delete product
+			4.get product by id
+			5.getall products
+			6.getall products between prices
+			7.getall products by category
+			8.get products by name 
+
+	layered architecture 
+	
+		rest api
+	
+		jpa->mysql
+		
+		postman 
+		
+		exception handling
+		
+		validations
+		
+		
+		
+				<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
